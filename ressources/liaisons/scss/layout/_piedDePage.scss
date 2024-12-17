@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.pied_de_page-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .pied_de_page-mobile {
+    display: flex;
+    padding: 20px;
+    position: relative;
+    background-color: $pdpArrierePlan;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pied-de-page__elements {
+    display: flex;
+    padding: 20px;
+    position: relative;
+    background-color: $pdpArrierePlan;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .pied_de_page__logo-mobile {
+    content: $pdpLogo;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .pied_de_page__coordonnees-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .lien__mails-mobile {
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    color: $pdpLiens;
+    text-align: center;
+    font-size: 18px;
+    transition: color 0.6s ease;
+    font-weight: normal;
+  }
+
+  .lien__mails-mobile:hover {
+    color: $pdpLiensHover;
+  }
+
+  .credit-mobile {
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    color: $pdpLiens;
+    text-align: center;
+    font-size: 18px;
+    transition: color 0.6s ease;
+    font-weight: normal;
+  }
+
+  .credit-mobile:hover {
+    color: $pdpLiensHover;
+  }
+
+  .social-buttons-mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .pied-de-page__compte {
+    display: flex;
+    position: relative;
+    background-color: $pdpArrierePlan;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .pied_de_page-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    background-color: $pdpArrierePlan;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .pied_de_page__logo-mobile {
+    content: $pdpLogoFavicon;
+    max-height: 50px;
+  }
+
+  .pied_de_page__coordonnees-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .lien__mails-mobile {
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    color: $pdpLiens;
+    text-align: center;
+    font-size: 18px;
+    transition: color 0.6s ease;
+  }
+
+  .lien__mails-mobile:hover {
+    color: $pdpLiensHover;
+  }
+
+  .credit-mobile {
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    color: $pdpLiens;
+    text-align: center;
+    font-size: 18px;
+    transition: color 0.6s ease;
+  }
+
+  .credit-mobile:hover {
+    color: $pdpLiensHover;
+  }
+
+  .social-buttons-mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .pied_de_page-mobile__separateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px 1px 0;
+    border-style: dashed;
+    border-color: $pdpSeparateur;
+    margin: 15px;
+    width: 300px;
+  }
+}

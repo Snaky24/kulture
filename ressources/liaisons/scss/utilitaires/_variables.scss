@@ -1,0 +1,57 @@
+/**
+* @author Prenom Nom courriel
+*/
+
+/** Polices de caractères **/
+
+/** Palette de couleurs **/
+// Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
+// Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange
+
+/* Couleurs de base */
+
+/** En-tête **/
+$enteteBeige: #DDD8D2;
+$enteteTextes: #2E2922;
+$enteteIcones: #2E2922;
+$enteteSeparateurs: #2E2922;
+$enteteTextesSurvol: #968872;
+$enteteMenuHamburgerIcones: #2E2922;
+$enteteMenuHamburgerTextes: #2E2922;
+$enteteRechercheFond: #FFFFFF;
+$enteteRechercheContour: #2E2922;
+$enteteRechercheTexte: #2E2922;
+
+/** Pied-de-page **/
+$pdpArrierePlan: #DDD8D2;
+$pdpArrierePlanElements: #2E2922;
+$pdpLiens: #2E2922;
+$pdpLiensHover: #968872;
+$pdpSeparateur: #2E2922;
+
+/* Images de fond */
+
+/** En-tête **/
+$imageEnteteRecherche: url(../images/graphpaper-hover.jpeg);
+$imageEntetePages: url(../images/graphpaper-hover.jpeg);
+$imageEnteteLiens: url(../images/graphpaper-hover.jpeg);
+$imageEnteteSocial: url(../images/graphpaper-hover.jpeg);
+$imageEnteteModif: url(../images/graphpaper-hoverbtn.jpeg);
+
+/** Pied-de-page **/
+$pdpLogo: url(../images/svg/favicon.svg);
+$pdpLogoFavicon: url(../images/svg/logo.svg);
+
+/* Autres couleurs */
+
+
+/** Points de rupture **/
+$table : 701px;
+$tablette : 700px;
+$mobile : 400px;
+
+/* Icons de médias sociaux */
+$social-button-size: 50px;
+$social-button-background: url('../images/graphpaper-hover.jpeg');
+$social-button-active-color: url('../images/graphpaper-hoverbtn.jpeg');
+$social-button-transition-time: 1s;

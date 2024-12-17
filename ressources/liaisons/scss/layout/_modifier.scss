@@ -1,0 +1,484 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.favicon {
+  width: 10px;
+  height: auto;
+}
+
+
+.body__modif {
+  background-color: #FFF;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.div__modifliste {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.div__modifliste-h1 {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #2E2922;
+  padding-bottom: 40px;
+}
+
+.form-modifier-labels {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.div__form-nom {
+  width: 100%;
+  text-align: center;
+}
+
+.nom__label {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.nom__input {
+  margin-top: 20px;
+  width: 50%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px dashed #2E2922;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+}
+
+.nom__input:hover {
+  cursor: pointer;
+}
+
+.div__form-couleurs {
+  width: 60%;
+  margin: 20px 0;
+}
+
+.couleurs {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__couleurs {
+  background-image: url(../images/graphpaper-hover.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.couleurs-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.couleur-option {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px dashed #2E2922;
+  transition: all 1s;
+  position: relative;
+}
+
+.couleur-option:hover {
+  transform: scale(1.1);
+}
+
+.couleur-option input[type="radio"] {
+  display: none;
+}
+
+.couleur-option input[type="radio"]:checked+span {
+  border: 3px solid #2E2922;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#couleur-selectionnee {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #2E2922;
+  letter-spacing: 2px;
+  padding: 15px;
+}
+
+.visually-hidden-modif {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.couleur-option input[type="radio"]:checked+.visually-hidden {
+  border: 3px solid #2E2922;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.modifliste__separateur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px 1px 0;
+  border-style: dashed;
+  border-color: #2E2922;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50%;
+  padding: 40px;
+}
+
+.btn-enregistrer {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  background-image: url(../images/graphpaper-hoverbtn.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+}
+
+.btn-enregistrer:hover {
+  color: #000;
+  background-image: url(../images/graphpaper-hover.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btn-annuler__modif {
+  text-align: center;
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  width: 10%;
+  color: #2E2922;
+  border: none;
+  border-radius: 10px;
+  background-image: url(../images/graphpaper-hover.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  text-decoration: none;
+}
+
+.btn-annuler__modif:hover {
+  color: #FFF;
+  background-image: url(../images/graphpaper-hoverbtn.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.breadcrumb {
+  font-family: "Sour Gummy", sans-serif;
+  margin: 20px;
+  padding: 10px 16px;
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #2E2922;
+  content: "/\00a0";
+}
+
+.breadcrumb-li__lien {
+  color: #968872;
+  text-decoration: none;
+  transition: color 1s;
+}
+
+.breadcrumb-li__lien:hover {
+  color: #6B441B;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .nom__input {
+    width: 90%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn-enregistrer {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 20px;
+    padding: 15px 20px;
+    border: none;
+    color: #FFF;
+    border-radius: 10px;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+  }
+
+  .btn-enregistrer:hover {
+    color: #FFF;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+  }
+
+  .btn-annuler__modif {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 20px;
+    padding: 15px 20px;
+    border: none;
+    color: #2E2922;
+    border-radius: 10px;
+    background-image: url(../images/graphpaper-hover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+  }
+
+  .btn-annuler__modif:hover {
+    color: #2E2922;
+    background-image: url(../images/graphpaper-hover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+  }
+
+  .modifliste__separateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px 1px 0;
+    border-style: dashed;
+    border-color: #2E2922;
+    margin-top: 20px;
+  }
+
+  .btn-ajouter {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 20px;
+    padding: 15px 20px;
+    border: none;
+    color: #FFF;
+    border-radius: 10px;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+  }
+
+  .btn-ajouter:hover {
+    color: #FFF;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+  }
+
+  .btn-annuler__ajout {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 20px;
+    padding: 15px 20px;
+    border: none;
+    color: #2E2922;
+    border-radius: 10px;
+    background-image: url(../images/graphpaper-hover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+  }
+
+  .btn-annuler__ajout:hover {
+    color: #2E2922;
+    background-image: url(../images/graphpaper-hover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+  }
+
+  .ajoutliste__separateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px 1px 0;
+    border-style: dashed;
+    border-color: #2E2922;
+    margin-top: 20px;
+  }
+
+  .breadcrumb {
+    margin: 20px;
+    padding: 10px 16px;
+    display: flex;
+    list-style: none;
+  }
+
+  .breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #2E2922;
+    content: "/\00a0";
+  }
+
+  .breadcrumb-li__lien {
+    color: #968872;
+    text-decoration: none;
+    transition: color 1s;
+  }
+
+  .breadcrumb-li__lien:hover {
+    color: #6B441B;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .div__modifliste-h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-enregistrer {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+  }
+
+  .btn-enregistrer:hover {
+    color: #2E2922;
+    background-image: url(../images/graphpaper-hover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .btn-annuler__modif {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #2E2922;
+    background-image: url(../images/graphpaper-hover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+  }
+
+  .btn-annuler__modif:hover {
+    color: #FFF;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .modifliste__separateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px 1px 0;
+    border-style: dashed;
+    border-color: #2E2922;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .breadcrumb {
+    margin: 20px;
+    padding: 10px 16px;
+    display: flex;
+    list-style: none;
+  }
+
+  .breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #2E2922;
+    content: "/\00a0";
+  }
+
+  .breadcrumb-li__lien {
+    color: #968872;
+    text-decoration: none;
+    transition: color 1s;
+  }
+
+  .breadcrumb-li__lien:hover {
+    color: #6B441B;
+    text-decoration: underline;
+  }
+}

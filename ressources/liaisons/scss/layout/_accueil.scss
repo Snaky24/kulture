@@ -1,0 +1,665 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.favicon {
+  width: 10px;
+  height: auto;
+}
+
+
+.body__accueil {
+  background-color: #FFF;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.presentation__accueil {
+  display: flex;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+
+  .salutation {
+    font-family: "Sour Gummy", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    color: #2E2922;
+  }
+}
+
+.voir__taches {
+  padding: 15px;
+  text-align: center;
+}
+
+.btn-devoirs {
+  display: inline-block;
+  font-family: "Sour Gummy", sans-serif;
+  letter-spacing: 1.4px;
+  padding: 20px 40px;
+  background-image: url(../images/graphpaper-hover.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  color: #2E2922;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+.btn-devoirs:hover {
+  transform: scale(1.1);
+}
+
+.liste__accueil {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.liste-box {
+  font-family: "Sour Gummy", sans-serif;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url(../images/graphpaper-hover.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.liste-box .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nom_devoirs__textes {
+  font-family: "Sour Gummy", sans-serif;
+  text-decoration: none;
+  position: relative;
+  color: #2E2922;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 24px;
+  margin-right: 100px;
+  font-weight: bold;
+}
+
+.nom_devoirs {
+  text-decoration: none;
+  color: #2E2922;
+  transition: all 1s;
+}
+
+.nom_devoirs:hover {
+  text-decoration: none;
+  color: #968872;
+  width: fit-content;
+}
+
+.message__pdo {
+  margin: 15px;
+  width: 70%;
+}
+
+.svg-message-succes {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-right: 10px;
+  fill: #248244;
+}
+
+.message-succes {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: #248244;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px dashed #248244;
+  background-color: rgba(36, 130, 68, 0.2);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-modifier {
+  background-color: #248244;
+  border: 2px dashed #2E2922;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #FFF;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  text-decoration: none;
+  letter-spacing: 1.4px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.btn-modifier:hover {
+  transform: scale(1.1);
+}
+
+.btn-supprimer {
+  font-size: 16px;
+  background-color: #e02300;
+  border: 2px dashed #2E2922;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #FFF;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  text-decoration: none;
+  letter-spacing: 1.4px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.btn-supprimer:hover {
+  transform: scale(1.1);
+}
+
+.modale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modale-contenu {
+  background-image: $imageEnteteModif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #FFF;
+  font-size: 22px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 500px;
+}
+
+.modale-actions button {
+  background-image: $imageEnteteSocial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #2E2922;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+  margin-top: 30px;
+  box-shadow: 0 0.2rem 1.2rem rgba(255, 255, 255, 0.2);
+  transition: all 1s;
+  width: 30%;
+}
+
+.modale-actions button:hover {
+  transform: scale(1.1);
+}
+
+.echeance {
+  background-color: #e02300;
+  padding: 2px;
+}
+
+.tache-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  color: #2E2922;
+}
+
+.echance__date {
+  padding: 2px;
+}
+
+.tache-info h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.total-taches {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 12px;
+  color: #2E2922;
+  width: fit-content;
+  padding: 3px 4px;
+  font-weight: normal;
+}
+
+.couleur-apercu {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 1px solid #fff;
+}
+
+.nom_devoirs::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #968872;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.nom_devoirs:hover {
+  color: #968872;
+}
+
+.nom_devoirs:hover::before {
+  width: 100%;
+}
+
+.taches-echeance {
+  font-family: "Sour Gummy", sans-serif;
+  color: #FFF;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  background-image: url(../images/graphpaper-hoverbtn.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.taches-echeance h2 {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.liste-taches {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tache-info h3 {
+  font-family: "Sour Gummy", sans-serif;
+  margin: 0;
+  font-size: 20px;
+  color: #2E2922;
+}
+
+.tache-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #2E2922;
+}
+
+.ajouter-liste-container {
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-ajouter-liste {
+  display: inline-block;
+  font-family: "Sour Gummy", sans-serif;
+  letter-spacing: 1.4px;
+  padding: 20px 40px;
+  background-image: url(../images/graphpaper-hoverbtn.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+.btn-ajouter-liste:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+  .presentation__accueil {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .salutation {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .liste__accueil {
+    padding: 10px;
+  }
+
+  .taches-echeance {
+    font-family: "Sour Gummy", sans-serif;
+    color: #FFF;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  }
+
+  .liste-box {
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .taches-echeance h2 {
+    text-align: center;
+  }
+
+  .diagramme-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .listes__accueil {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .btn-modifier {
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .btn-supprimer {
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+    padding: 10px;
+  }
+
+  .nom_devoirs {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modale-contenu {
+    background-image: $imageEnteteModif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+    font-size: 22px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+  }
+
+  .modale-actions button {
+    background-image: $imageEnteteSocial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #2E2922;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1.4px;
+    margin-top: 30px;
+    box-shadow: 0 0.2rem 1.2rem rgba(255, 255, 255, 0.2);
+    transition: all 1s;
+    width: 30%;
+  }
+
+  .modale-actions button:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .salutation {
+    font-size: 1.2rem;
+  }
+
+  .taches-echeance {
+    width: 100%;
+    font-family: "Sour Gummy", sans-serif;
+    color: #FFF;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    background-image: url(../images/graphpaper-hoverbtn.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-devoirs,
+  .btn-ajouter-liste {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  .nom_devoirs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nom_devoirs__textes {
+    font-family: "Sour Gummy", sans-serif;
+    text-decoration: none;
+    position: relative;
+    color: #2E2922;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 24px;
+    margin-right: 70px;
+    font-weight: bold;
+  }
+
+  .search-bar {
+    font-size: 1rem;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .search-btn {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  .liste-box {
+    padding: 20px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tache-item {
+    padding: 10px;
+  }
+
+  .tache-info h3 {
+    font-family: "Sour Gummy", sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: #2E2922;
+    text-align: left;
+  }
+
+  .liste-box .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .listes__accueil {
+    padding: 0;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn-modifier {
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+    font-size: 16px;
+  }
+
+  .btn-supprimer {
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+    font-size: 16px;
+  }
+
+  .total-taches {
+    font-family: "Sour Gummy", sans-serif;
+    color: #2E2922;
+    font-size: 12px;
+    width: fit-content;
+    padding: 4px;
+    font-weight: normal;
+  }
+
+  .modale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modale-contenu {
+    background-image: $imageEnteteModif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .modale-actions button {
+    background-image: $imageEnteteSocial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #2E2922;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1.4px;
+    margin-top: 30px;
+    box-shadow: 0 0.2rem 1.2rem rgba(255, 255, 255, 0.2);
+    transition: all 1s;
+  }
+
+  .modale-actions button:hover {
+    transform: scale(1.1);
+  }
+
+  .btn-oui {
+    width: 30%;
+    background-color: #248244;
+    color: #FFF;
+  }
+
+  .btn-annuler {
+    width: 30%;
+    background-color: #248244;
+    color: #FFF;
+  }
+}
