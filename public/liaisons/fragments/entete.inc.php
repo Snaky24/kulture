@@ -1,7 +1,5 @@
 <header class="entete">
-    <div class="entete__logo">
-        <img class="logo" src="liaisons/images/svg/logo.svg" alt="Logo">
-    </div>
+
 </header>
 <div class="sidebar">
     <div class="logo-details">

@@ -1286,6 +1286,14 @@ h3--desktop,
   box-sizing: border-box;
 }
 
+.entete {
+  display: flex;
+  padding: 20px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -1338,7 +1346,6 @@ h3--desktop,
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
-  fill: #fff;
 }
 
 .sidebar.open .logo-details #btn {

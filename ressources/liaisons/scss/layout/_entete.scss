@@ -13,6 +13,14 @@
   box-sizing: border-box;
 }
 
+.entete {
+  display: flex;
+  padding: 20px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -24,23 +32,19 @@
   z-index: 99;
   transition: all 0.5s ease;
 }
-
 .sidebar.open {
   width: 250px;
 }
-
 .sidebar .logo-details {
   height: 60px;
   display: flex;
   align-items: center;
   position: relative;
 }
-
 .sidebar .logo-details .icon {
   opacity: 0;
   transition: all 0.5s ease;
 }
-
 .sidebar .logo-details .logo_name {
   color: #fff;
   font-size: 20px;
@@ -48,12 +52,10 @@
   opacity: 0;
   transition: all 0.5s ease;
 }
-
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name {
   opacity: 1;
 }
-
 .sidebar .logo-details #btn {
   position: absolute;
   top: 50%;
@@ -65,13 +67,10 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
-  fill: #fff;
 }
-
 .sidebar.open .logo-details #btn {
   text-align: right;
 }
-
 .sidebar i {
   color: #fff;
   height: 60px;
@@ -80,18 +79,15 @@
   text-align: center;
   line-height: 60px;
 }
-
 .sidebar .nav-list {
   margin-top: 20px;
   height: 100%;
 }
-
 .sidebar li {
   position: relative;
   margin: 8px 0;
   list-style: none;
 }
-
 .sidebar li .tooltip {
   position: absolute;
   top: -20px;
@@ -108,7 +104,6 @@
   pointer-events: none;
   transition: 0s;
 }
-
 .sidebar li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
@@ -116,11 +111,9 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
 .sidebar.open li .tooltip {
   display: none;
 }
-
 .sidebar input {
   font-size: 15px;
   color: #fff;
@@ -134,12 +127,10 @@
   transition: all 0.5s ease;
   background: #1d1b31;
 }
-
 .sidebar.open input {
   padding: 0 20px 0 50px;
   width: 100%;
 }
-
 .sidebar .bx-search {
   position: absolute;
   top: 50%;
@@ -149,17 +140,14 @@
   background: #1d1b31;
   color: #fff;
 }
-
 .sidebar.open .bx-search:hover {
   background: #1d1b31;
   color: #fff;
 }
-
 .sidebar .bx-search:hover {
   background: #fff;
   color: #11101d;
 }
-
 .sidebar li a {
   display: flex;
   height: 100%;
@@ -170,11 +158,9 @@
   transition: all 0.4s ease;
   background: #11101d;
 }
-
 .sidebar li a:hover {
   background: #fff;
 }
-
 .sidebar li a .links_name {
   color: #fff;
   font-size: 15px;
@@ -184,25 +170,21 @@
   pointer-events: none;
   transition: 0.4s;
 }
-
 .sidebar.open li a .links_name {
   opacity: 1;
   pointer-events: auto;
 }
-
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
   transition: all 0.5s ease;
   color: #11101d;
 }
-
 .sidebar li i {
   height: 50px;
   line-height: 50px;
   font-size: 18px;
   border-radius: 12px;
 }
-
 .sidebar li.profile {
   position: fixed;
   height: 60px;
@@ -214,17 +196,14 @@
   transition: all 0.5s ease;
   overflow: hidden;
 }
-
 .sidebar.open li.profile {
   width: 250px;
 }
-
 .sidebar li .profile-details {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
 }
-
 .sidebar li.profile .name,
 .sidebar li.profile .job {
   font-size: 15px;
@@ -232,11 +211,9 @@
   color: #fff;
   white-space: nowrap;
 }
-
 .sidebar li.profile .job {
   font-size: 12px;
 }
-
 .sidebar .profile #log_out {
   position: absolute;
   top: 50%;
@@ -249,12 +226,10 @@
   border-radius: 0px;
   transition: all 0.5s ease;
 }
-
 .sidebar.open .profile #log_out {
   width: 50px;
   background: none;
 }
-
 .home-section {
   position: relative;
   background: #e4e9f7;
@@ -265,12 +240,10 @@
   transition: all 0.5s ease;
   z-index: 2;
 }
-
-.sidebar.open~.home-section {
+.sidebar.open ~ .home-section {
   left: 250px;
   width: calc(100% - 250px);
 }
-
 .home-section .text {
   display: inline-block;
   color: #11101d;
@@ -278,7 +251,6 @@
   font-weight: 500;
   margin: 18px;
 }
-
 @media (max-width: 420px) {
   .sidebar li .tooltip {
     display: none;
