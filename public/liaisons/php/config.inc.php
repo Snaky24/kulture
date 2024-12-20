@@ -13,9 +13,9 @@ if (stristr($_SERVER['HTTP_HOST'], 'local') || (substr($_SERVER['HTTP_HOST'], 0,
 if ($blnLocal) {
     //Local
     $strHost = 'localhost';
-    $strBD='24_rpni1_tofu';
-    $strUser = '24_rpni1_tofu';
-    $strPassword= 'rpni1_mdp';
+    $strBD='24_kulture';
+    $strUser = '24_kulture';
+    $strPassword= 'kulture__mdp';
     error_reporting(E_ALL);
 } else {
     //en ligne

@@ -1,108 +1,146 @@
 <header class="entete">
-
 </header>
 <div class="sidebar">
     <div class="logo-details">
-        <i class='bx bxl-codepen icon'></i>
-        <div class="logo_name">SideMenu</div>
-        <i class='bx bx-menu' id="btn"></i>
+        <span class="logo_name">KULTURE</span>
     </div>
-    <ul class="nav-list">
-        <li>
-            <i class='bx bx-search'></i>
-            <input type="text" placeholder="Search...">
-            <span class="tooltip">Search</span>
-        </li>
+    <ul class="nav-links">
         <li>
             <a href="#">
-                <i class='bx bx-grid-alt'></i>
-                <span class="links_name">Dashboard</span>
+                <i class='bx bxs-home'></i>
+                <span class="link_name">Accueil</span>
             </a>
-            <span class="tooltip">Dashboard</span>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Accueil</a></li>
+            </ul>
         </li>
         <li>
-            <a href="#">
-                <i class='bx bx-user'></i>
-                <span class="links_name">User</span>
-            </a>
-            <span class="tooltip">User</span>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-collection'></i>
+                    <span class="link_name">Compte</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Category</a></li>
+                <li><a href="../public/compte/inscription.php">Inscription</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">PHP & MySQL</a></li>
+            </ul>
         </li>
         <li>
-            <a href="#">
-                <i class='bx bx-chat'></i>
-                <span class="links_name">Messages</span>
-            </a>
-            <span class="tooltip">Messages</span>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-book-alt'></i>
+                    <span class="link_name">Posts</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Posts</a></li>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Login Form</a></li>
+                <li><a href="#">Card Design</a></li>
+            </ul>
         </li>
         <li>
             <a href="#">
                 <i class='bx bx-pie-chart-alt-2'></i>
-                <span class="links_name">Analytics</span>
+                <span class="link_name">Analytics</span>
             </a>
-            <span class="tooltip">Analytics</span>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Analytics</a></li>
+            </ul>
         </li>
         <li>
             <a href="#">
-                <i class='bx bx-folder'></i>
-                <span class="links_name">File Manager</span>
+                <i class='bx bx-line-chart'></i>
+                <span class="link_name">Chart</span>
             </a>
-            <span class="tooltip">Files</span>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Chart</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-plug'></i>
+                    <span class="link_name">Plugins</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Plugins</a></li>
+                <li><a href="#">UI Face</a></li>
+                <li><a href="#">Pigments</a></li>
+                <li><a href="#">Box Icons</a></li>
+            </ul>
         </li>
         <li>
             <a href="#">
-                <i class='bx bx-cart-alt'></i>
-                <span class="links_name">Order</span>
+                <i class='bx bx-compass'></i>
+                <span class="link_name">Explore</span>
             </a>
-            <span class="tooltip">Order</span>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Explore</a></li>
+            </ul>
         </li>
         <li>
             <a href="#">
-                <i class='bx bx-heart'></i>
-                <span class="links_name">Saved</span>
+                <i class='bx bx-history'></i>
+                <span class="link_name">History</span>
             </a>
-            <span class="tooltip">Saved</span>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">History</a></li>
+            </ul>
         </li>
         <li>
             <a href="#">
                 <i class='bx bx-cog'></i>
-                <span class="links_name">Setting</span>
+                <span class="link_name">Setting</span>
             </a>
-            <span class="tooltip">Setting</span>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Setting</a></li>
+            </ul>
         </li>
-        <li class="profile">
+        <li>
             <div class="profile-details">
-                <i class='bx bx-export'></i>
-                <div class="name_job">
-                    <div class="name">Logout</div>
+                <div class="profile-content">
+                    <img src="http://placebeard.it/250/250" alt="profileImg">
                 </div>
+                <div class="name-job">
+                    <div class="profile_name">Farid Vatani</div>
+                    <div class="job">Software Engineer</div>
+                </div>
+                <i class='bx bx-log-out'></i>
             </div>
-            <i class='bx bx-log-out' id="log_out"></i>
         </li>
     </ul>
 </div>
+<section class="home-section">
+    <div class="home-content">
+        <i class='bx bx-menu'></i>
+        <span class="text">DashBoard Sidebar</span>
+    </div>
+</section>
 
 <script>
-    let sidebar = document.querySelector(".sidebar");
-    let closeBtn = document.querySelector("#btn");
-    let searchBtn = document.querySelector(".bx-search");
+    const arrows = document.querySelectorAll(".arrow");
 
-    closeBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-        menuBtnChange();
+    arrows.forEach((arrow) => {
+        arrow.addEventListener("click", (e) => {
+            const arrowParent = e.target.closest(".arrow").parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu");
+        });
     });
 
-    searchBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-        menuBtnChange();
-    });
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarBtn = document.querySelector(".bx-menu");
 
-    function menuBtnChange() {
-        if (sidebar.classList.contains("open")) {
-            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-        } else {
-            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-        }
-    }
+    sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+    });
 </script>
 
 <main class="contenu">

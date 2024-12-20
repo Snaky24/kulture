@@ -11,6 +11,7 @@
 	<meta name="author" content="">
 	<meta charset="utf-8">
 	<link class="favicon" rel="icon" type="image/x-icon" href="liaisons/images/svg/favicon.svg">
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 	<title>Accueil | GO-ALL</title>
 	<?php include($niveau . "liaisons/fragments/headlinks.inc.php"); ?>
 </head>
